@@ -40,9 +40,7 @@ modals.forEach(function (trigger) {
   })
 })
 
-//! BUG: Make this select a class instead of id
 const mainContainer = document.querySelector('#main_container')
-//! Bug: remove invocation for one of these
 mainContainer.innerHTML = `
   <div id="authors">${AuthorsHTML()}</div>
   <div id="books">${BooksHTML()}</div>

@@ -258,3 +258,7 @@ export const getBooks = () => {
 export const getAuthors = () => {
   return database.authors.map((author) => ({ ...author }))
 }
+
+export const getGenres = () => {
+  return database.genres.map((genre) => ({ ...genre }))
+}

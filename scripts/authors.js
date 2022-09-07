@@ -8,7 +8,6 @@ export const AuthorsHTML = () => {
   let html = `<div>Authors</div><ul>`
 
   for (const currentAuthor of authors) {
-    //! Bug: Make this author.name instead
     html += `<li class="author" id="author--${currentAuthor.id}">${currentAuthor.name}</li>`
   }
 
@@ -23,17 +22,12 @@ document.addEventListener('click', (event) => {
   if (currentTarget.id.startsWith('author')) {
     //? What does this weird code do?
     const [, authorId] = currentTarget.id.split('--')
-    //! Bug: remove parseInt
-    const selectedAuthor = authors.find(
-      (author) => parseInt(authorId) === author.id
-    )
+    const selectedAuthor = authors.find((author) => authorId === author.id)
 
-    //! Bug: Make this a const
-    let bookCount = 0
+    const bookCount = 0
 
     for (const currentBook of books) {
-      //! Bug: make this currentBook.id instead of currentBook.authorId
-      if (selectedAuthor.id === currentBook.authorId) {
+      if (selectedAuthor.id === currentBook.id) {
         bookCount++
       }
     }
