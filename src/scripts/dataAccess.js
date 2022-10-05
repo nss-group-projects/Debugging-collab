@@ -7,16 +7,7 @@ const applicationState = {
 }
 
 // FETCH CALLS
+//^ Write fetch calls to get data
 
 // GETTER FUNCTIONS
-export const getBooks = () => {
-  return applicationState.books.map((book) => ({ ...book }))
-}
-
-export const getAuthors = () => {
-  return applicationState.authors.map((author) => ({ ...author }))
-}
-
-export const getGenres = () => {
-  return applicationState.genres.map((genre) => ({ ...genre }))
-}
+//^ Write getter functions to get application state
